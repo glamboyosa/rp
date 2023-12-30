@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { sofia } from "./font";
 import { cn } from "./utils";
-import { useRouter } from "next/navigation";
 import { Links } from "./links";
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
         </p>
         <Links />
       </header>
-      <div class="p-6  flex items-center justify-center">
+      <div id="home" class="p-6  flex items-center justify-center">
         <div className="p-24 -mt-6 border-r-2 uppercase border-white border-l-2">
           <div className="relative mb-8">
             <h1 className="text-4xl absolute inset-y-0 -top-1.5  z-20  text-primary md:text-6xl">
@@ -64,7 +63,10 @@ export default function Home() {
 
       <div class="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-36 top-1/2 border rounded-full rotate-90"></div>
       <div class="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-52 top-[52%] border rotate-45"></div>
-      <div class="w-full text-lg md:text-2xl gap-0.5 border text-offBlack p-6 flex items-center justify-center flex-col border-white relative z-20">
+      <div
+        id="about"
+        class="w-full text-lg md:text-2xl gap-0.5 border text-offBlack p-6 flex items-center justify-center flex-col border-white relative z-20"
+      >
         <div>
           Picture a fusion of{" "}
           <span className="text-primary">product design</span> and{" "}
@@ -82,7 +84,33 @@ export default function Home() {
           blend the unexpected to create something uniquely awesome.
         </div>
       </div>
-      <h3 className="text-4xl md:text-5xl text-center text-white mt-4">Works</h3>
+
+      <div class="absolute top-[48%]  left-1/2 -translate-x-1/2 p-2 translate-y-1/2 border-l-2 border-r-2 border-white   gap-6 items-center justify-center">
+        <h3
+          id="works"
+          className="text-4xl pt-3  md:text-5xl text-center text-white"
+        >
+          Works
+        </h3>
+        <div className="flex mt-5 items-center justify-center">
+          <Image
+            src="/bike.svg"
+            width={400}
+            height={400}
+            alt="bike"
+            className="mb-2 w-3/4 h-full items-center"
+          />
+        </div>
+        <div className="flex mt-5 items-center justify-center">
+          <Image
+            src="/pack.svg"
+            width={400}
+            height={400}
+            alt="bike"
+            className="mb-2 w-3/4 h-full items-center"
+          />
+        </div>
+      </div>
     </main>
   );
 }
