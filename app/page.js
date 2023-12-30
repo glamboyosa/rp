@@ -5,7 +5,7 @@ import { Links } from "./links";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen relative bg-[#262627]">
+    <main className=" min-h-screen  overflow-x-clip relative ">
       <header className="flex items-center justify-center border-b-2 p-2 border-white">
         <p
           className={cn(
@@ -85,7 +85,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="absolute top-[48%]  left-1/2 -translate-x-1/2 p-2 translate-y-1/2 border-l-2 border-r-2 border-white   gap-6 items-center justify-center">
+      <div class="absolute top-[65%] md:top-[48%]  left-1/2 -translate-x-1/2 p-2 translate-y-1/2 border-l-2 border-r-2 border-white   gap-6 items-center justify-center">
         <h3
           id="works"
           className="text-4xl pt-3  md:text-5xl text-center text-white"

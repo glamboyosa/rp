@@ -10,7 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={cn(MM.className, "bg-[#262627]")}>{children}</body>
+      <body className={cn(MM.className, "bg-[#262627]")}>
+        {children}
+      </body>
     </html>
   );
 }
