@@ -14,10 +14,14 @@ export function Links() {
     console.log(params);
     console.log(pathname);
     console.log(window.location.hash);
-    setActiveTab(window.location.hash.split("#")[1]);
+    setActiveTab(
+      window.location.hash.length > 0
+        ? window.location.hash.split("#")[1]
+        : "home"
+    );
   }, [params, pathname]);
   return (
-    <nav className="mr-auto">
+    <nav className="mr-1 md:mr-[590px]">
       <ul className="gap-4 text-white flex [&>*]:text-xl">
         <li>
           {activeTab === "home" ? (

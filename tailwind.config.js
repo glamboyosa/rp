@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         primary: "#95FF00",
         offBlack: "#6B6868",
+        shapes: "#d9d9d9",
       },
     },
   },
