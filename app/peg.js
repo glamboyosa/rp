@@ -3,7 +3,7 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { cn } from "./utils";
 import { useMediaQuery } from "@reactuses/core";
 
-const Peg = ({ className }) => {
+const Peg = ({ className, from, to }) => {
   const [height, setHeight] = useState(0);
   const isMobile = useMediaQuery("(max-width: 520px)");
 
@@ -11,17 +11,17 @@ const Peg = ({ className }) => {
     if (isMobile) {
       setHeight(0);
     } else {
-      const worksDiv = document.getElementById("works");
+      const worksDiv = document.getElementById(from);
 
       const height = worksDiv.offsetHeight;
 
-      const aboutDiv = document.getElementById("about");
+      const aboutDiv = document.getElementById(to);
 
       const totalHeight = height + aboutDiv.clientHeight + 2;
 
       setHeight(totalHeight);
     }
-  }, [isMobile]);
+  }, [isMobile, from, to]);
   return (
     <div
       className={cn(

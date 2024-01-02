@@ -90,8 +90,8 @@ export default function Home() {
         <h3 className="text-4xl pt-3 p-4 mb-3  md:text-5xl text-center text-white">
           Works
         </h3>
-        <Peg className=" left-1/4" />
-        <Peg className=" right-1/4 " />
+        <Peg from="works" to="about" className=" left-1/4" />
+        <Peg from="works" to="about" className=" right-1/4 " />
         <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
         <div className="flex flex-col mt-5 items-center justify-center">
           <div className="relative">
@@ -145,6 +145,16 @@ export default function Home() {
             className="w-[20%]"
           />
         </div>
+      </div>
+      <div
+        id="resume"
+        class=" relative  p-2 border-l-2  border-r-2 border-white   gap-6 items-center justify-center"
+      >
+        <h3 className="text-4xl pt-3 p-4 mb-3  md:text-5xl text-center text-white">
+         My Resume
+        </h3>
+        {/* <Peg from="works" to="about" className=" left-1/4" />
+        <Peg from="works" to="about" className=" right-1/4 " /> */}
       </div>
     </main>
   );
