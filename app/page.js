@@ -3,6 +3,7 @@ import { sofia } from "./font";
 import { cn } from "./utils";
 import { Links } from "./links";
 import Peg from "./peg";
+import ResumeSwitcher from "./resume-switcher";
 
 export default function Home() {
   return (
@@ -85,7 +86,7 @@ export default function Home() {
 
       <div
         id="works"
-        class=" relative  p-2 border-l-2  border-r-2 border-white   gap-6 items-center justify-center"
+        class=" relative  p-2  border-white   gap-6 items-center justify-center"
       >
         <h3 className="text-4xl pt-3 p-4 mb-3  md:text-5xl text-center text-white">
           Works
@@ -148,14 +149,92 @@ export default function Home() {
       </div>
       <div
         id="resume"
-        class=" relative  p-2 border-l-2  border-r-2 border-white   gap-6 items-center justify-center"
+        class=" relative  p-2  border-white   gap-6 items-center justify-center"
       >
-        <h3 className="text-4xl pt-3 p-4 mb-3  md:text-5xl text-center text-white">
-         My Resume
+        <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
+        <h3 className="text-4xl  border-white pt-3 p-4 mb-3  md:text-5xl text-center text-white">
+          My Resume
         </h3>
-        {/* <Peg from="works" to="about" className=" left-1/4" />
-        <Peg from="works" to="about" className=" right-1/4 " /> */}
+        <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
+        <Peg from="resume" to="contact-id" className=" left-1/4" />
+        <Peg from="resume" to="contact-id" className=" right-1/4 " />
+        <ResumeSwitcher />
+        <div className="h-[1px] mt-3 -ml-1.5   w-[102%] bg-white"></div>
+        <h3
+          id="contact"
+          className="text-4xl  border-white pt-3 p-4 mb-3  md:text-5xl text-center text-white"
+        >
+          Contact Me...
+        </h3>
+        <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
+        <form
+          className="flex flex-col mt-2 items-center justify-around gap-3"
+          action=""
+        >
+          <div>
+            <div class="flex ml-2  text-2xl">
+              <p className="text-primary mr-2.5">01.</p>
+              <p className="text-white  mr-6">Name</p>
+              <input
+                type="text"
+                name="name"
+                className="bg-transparent outline-none  text-offBlack"
+                placeholder="Enter your name..."
+              />
+            </div>
+            <div className="h-[1px]   w-[50vw] bg-white"></div>
+          </div>
+          <div>
+            <div class="flex ml-2  text-2xl">
+              <p className="text-primary mr-2.5">02.</p>
+              <p className="text-white  mr-6">Email</p>
+              <input
+                type="email"
+                name="email"
+                className="bg-transparent outline-none  text-offBlack"
+                placeholder="Enter your email..."
+              />
+            </div>
+            <div className="h-[1px]   w-[50vw] bg-white"></div>
+          </div>
+          <div>
+            <div class="flex ml-2  text-2xl">
+              <p className="text-primary mr-2.5">03.</p>
+              <p className="text-white  mr-6">Phone Number</p>
+              <input
+                type="tel"
+                name="number"
+                className="bg-transparent w-3/4 outline-none  text-offBlack"
+                placeholder="Enter your phone number..."
+              />
+            </div>
+            <div className="h-[1px]   w-[50vw] bg-white"></div>
+          </div>
+          <div>
+            <div class="flex ml-2  text-2xl">
+              <p className="text-primary mr-2.5">04.</p>
+              <p className="text-white  mr-6">Your Message to me</p>
+              <input
+                type="text"
+                name="message"
+                className="bg-transparent outline-none  text-offBlack"
+                placeholder="Write your mind..."
+              />
+            </div>
+            <div className="h-[1px]   w-[50vw] bg-white"></div>
+          </div>
+          <button
+            type="submit"
+            className="bg-primary text-lg mt-4 rounded-sm px-10 py-3"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
+      <div
+        id="contact-id"
+        className="h-[1px] -ml-1.5   w-[102%] bg-white"
+      ></div>
     </main>
   );
 }

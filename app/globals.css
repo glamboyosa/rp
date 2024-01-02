@@ -5,3 +5,6 @@
 * {
   scroll-behavior: smooth;
 }
+embed {
+  width: 100%;
+}

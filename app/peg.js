@@ -17,7 +17,7 @@ const Peg = ({ className, from, to }) => {
 
       const aboutDiv = document.getElementById(to);
 
-      const totalHeight = height + aboutDiv.clientHeight + 2;
+      const totalHeight = height + aboutDiv.clientHeight + 1;
 
       setHeight(totalHeight);
     }
