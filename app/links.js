@@ -20,6 +20,7 @@ export function Links() {
         : "home"
     );
   }, [params, pathname]);
+
   return (
     <nav className="mr-1 md:mr-[590px]">
       <ul className="gap-4 text-white flex [&>*]:text-xl">
@@ -70,12 +71,12 @@ export function Links() {
             <div className="flex items-center gap-1">
               <Circle />
               <Link className="text-primary" href="/#resume">
-                Contact
+                Resume
               </Link>
             </div>
           ) : (
             <Link className="" href="/#resume">
-              Contact
+              Resume
             </Link>
           )}
         </li>

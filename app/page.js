@@ -2,6 +2,7 @@ import Image from "next/image";
 import { sofia } from "./font";
 import { cn } from "./utils";
 import { Links } from "./links";
+import Peg from "./peg";
 
 export default function Home() {
   return (
@@ -58,15 +59,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-36 top-1/2 border rounded-full rotate-90"></div>
-      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-52 top-[52%] border rotate-45"></div>
+      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-36 top-[38%] border rounded-full rotate-90"></div>
+      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-52 top-[39%] border rotate-45"></div>
 
-      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-36 top-1/2 border rounded-full rotate-90"></div>
-      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-52 top-[52%] border rotate-45"></div>
-      <div
-        id="about"
-        class="w-full text-lg md:text-2xl gap-0.5 border text-offBlack p-6 flex items-center justify-center flex-col border-white relative z-20"
-      >
+      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-36 top-[38%] border rounded-full rotate-90"></div>
+      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-52 top-[39%] border rotate-45"></div>
+      <div class="w-full text-lg md:text-2xl gap-0.5 border text-offBlack p-6 flex items-center justify-center flex-col border-white relative z-20">
         <div>
           Picture a fusion of{" "}
           <span className="text-primary">product design</span> and{" "}
@@ -85,29 +83,66 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="absolute top-[65%] md:top-[48%]  left-1/2 -translate-x-1/2 p-2 translate-y-1/2 border-l-2 border-r-2 border-white   gap-6 items-center justify-center">
-        <h3
-          id="works"
-          className="text-4xl pt-3  md:text-5xl text-center text-white"
-        >
+      <div
+        id="works"
+        class=" relative  p-2 border-l-2  border-r-2 border-white   gap-6 items-center justify-center"
+      >
+        <h3 className="text-4xl pt-3 p-4 mb-3  md:text-5xl text-center text-white">
           Works
         </h3>
-        <div className="flex mt-5 items-center justify-center">
-          <Image
-            src="/bike.svg"
-            width={400}
-            height={400}
-            alt="bike"
-            className="mb-2 w-3/4 h-full items-center"
-          />
+        <Peg className=" left-1/4" />
+        <Peg className=" right-1/4 " />
+        <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
+        <div className="flex flex-col mt-5 items-center justify-center">
+          <div className="relative">
+            <Image
+              src="/bike.svg"
+              width={500}
+              height={500}
+              alt="bike"
+              className="mb-2 h-full items-center"
+            />
+          </div>
         </div>
         <div className="flex mt-5 items-center justify-center">
           <Image
             src="/pack.svg"
-            width={400}
-            height={400}
+            width={500}
+            height={500}
             alt="bike"
-            className="mb-2 w-3/4 h-full items-center"
+            className="mb-2 h-full items-center"
+          />
+        </div>
+      </div>
+
+      <div>
+        <h3
+          id="about"
+          class="flex border-t-[1px] border-b-[1px]  text-center p-6 text-white  w-full border-white items-center justify-center text-3xl md:text-4xl"
+        >
+          Little about me...
+        </h3>
+        <div class="flex w-[90%] justify-center  text-offBlack gap-1">
+          <div className="h-full w-[45%] p-8 text-3xl">
+            <p className="p-2">
+              Hey, I&apos;m <span className="text-primary">Rhema</span> – a
+              hybrid of product design and backend mastery. When I&apos;m not
+              coding, I&apos;m hitting the gym or cooking up a storm while
+              cheering for basketball and soccer.
+            </p>
+            <p className="block p-2 mt-2">
+              My knack for innovation merges with a team-centric approach and
+              killer communication. I obsess over details, thrive on feedback,
+              and love turning ideas into successful products. Let&apos;s blend
+              creativity with functionality and make an impact together!
+            </p>
+          </div>
+          <Image
+            src="/me.svg"
+            width={100}
+            height={100}
+            alt="My profile picture"
+            className="w-[20%]"
           />
         </div>
       </div>
