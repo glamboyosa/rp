@@ -9,7 +9,6 @@ const Peg = ({ className }) => {
 
   useLayoutEffect(() => {
     if (isMobile) {
-      //
       setHeight(0);
     } else {
       const worksDiv = document.getElementById("works");
