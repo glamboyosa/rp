@@ -31,19 +31,19 @@ const ResumeSwitcher = () => {
         </button>
       </div>
       {selection === "pd" ? (
-        <embed
+        <iframe
           src="/prd.pdf"
-          className="w-1/2 mt-2 h-[800px] overflow-scroll"
+          className="w-1/2 mt-2 h-[300px] md:h-[800px] overflow-scroll"
           loading="lazy"
           title="PDF-file"
-        ></embed>
+        ></iframe>
       ) : (
-        <embed
+        <iframe
           src="/bnkd.pdf"
-          className="w-1/2 mt-2 h-[800px] overflow-scroll"
+          className="w-1/2 mt-2h-[300px] md:h-[800px] overflow-scroll"
           loading="lazy"
           title="PDF-file"
-        ></embed>
+        ></iframe>
       )}
     </div>
   );

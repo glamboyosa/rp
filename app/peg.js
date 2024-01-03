@@ -5,7 +5,7 @@ import { useMediaQuery } from "@reactuses/core";
 
 const Peg = ({ className, from, to }) => {
   const [height, setHeight] = useState(0);
-  const isMobile = useMediaQuery("(max-width: 520px)");
+  const isMobile = useMediaQuery("(max-width: 520px)", true);
 
   useLayoutEffect(() => {
     if (isMobile) {
@@ -17,7 +17,7 @@ const Peg = ({ className, from, to }) => {
 
       const aboutDiv = document.getElementById(to);
 
-      const totalHeight = height + aboutDiv.clientHeight + 1;
+      const totalHeight = height + aboutDiv.clientHeight;
 
       setHeight(totalHeight);
     }
@@ -25,7 +25,7 @@ const Peg = ({ className, from, to }) => {
   return (
     <div
       className={cn(
-        "absolute  top-0 w-[1.5px] bg-white",
+        "absolute top-0 w-[1.5px] bg-white",
         className && className
       )}
       style={{ height }}

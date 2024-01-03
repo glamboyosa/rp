@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import { MM } from "./font";
 import "./globals.css";
 import { cn } from "./utils";
@@ -11,7 +12,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={cn(MM.className, "bg-[#262627]")}>
-        {children}
+        <main> {children}</main>
+        <Toaster />
       </body>
     </html>
   );

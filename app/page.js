@@ -4,12 +4,11 @@ import { cn } from "./utils";
 import { Links } from "./links";
 import Peg from "./peg";
 import ResumeSwitcher from "./resume-switcher";
-import { sendEmail } from "./actions";
-const resend = new Resend(process.env.RESEND_API_KEY);
+import Form from "./form";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen  overflow-x-clip relative ">
+    <main className=" min-h-screen h-[388.5vh] overflow-y-clip overflow-x-clip relative ">
       <header className="flex items-center justify-center border-b-2 p-2 border-white">
         <p
           className={cn(
@@ -21,7 +20,7 @@ export default function Home() {
         </p>
         <Links />
       </header>
-      <div id="home" class="p-6  flex items-center justify-center">
+      <div id="home" className="p-6  flex items-center justify-center">
         <div className="p-24 -mt-6 border-r-2 uppercase border-white border-l-2">
           <div className="relative mb-8">
             <h1 className="text-4xl absolute inset-y-0 -top-1.5  z-20  text-primary md:text-6xl">
@@ -44,30 +43,30 @@ export default function Home() {
         </div>
       </div>
       <div className=" border-b-2 border-white -mt-6 w-full"></div>
-      <div class="p-8  text-white flex justify-around">
-        <div class="flex gap-1.5 items-start uppercase">
+      <div className="p-8  text-white flex justify-around">
+        <div className="flex gap-1.5 items-start uppercase">
           <Image src="/globe.svg" width={20} height={20} alt="globe svg" />
-          <p class="text-base text-primary md:text-lg">/</p>
+          <p className="text-base text-primary md:text-lg">/</p>
           <p className="text-base w-1/2 md:text-lg">
             based in Lagos and open to remote work
           </p>
         </div>
-        <div class="flex gap-1.5 items-start uppercase">
-          2<p class="text-base text-primary md:text-lg">/</p>
+        <div className="flex gap-1.5 items-start uppercase">
+          2<p className="text-base text-primary md:text-lg">/</p>
           <p className="text-base w-1/2 md:text-lg">years of experience</p>
         </div>
-        <div class="flex gap-1.5 items-start uppercase">
-          4<p class="text-base text-primary md:text-lg">/</p>
+        <div className="flex gap-1.5 items-start uppercase">
+          4<p className="text-base text-primary md:text-lg">/</p>
           <p className="text-base w-1/2 md:text-lg">number of projects</p>
         </div>
       </div>
 
-      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-36 top-[38%] border rounded-full rotate-90"></div>
-      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-52 top-[39%] border rotate-45"></div>
+      <div className="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-36 top-[38%] border rounded-full rotate-90"></div>
+      <div className="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-52 top-[39%] border rotate-45"></div>
 
-      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-36 top-[38%] border rounded-full rotate-90"></div>
-      <div class="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-52 top-[39%] border rotate-45"></div>
-      <div class="w-full text-lg md:text-2xl gap-0.5 border text-offBlack p-6 flex items-center justify-center flex-col border-white relative z-20">
+      <div className="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-36 top-[38%] border rounded-full rotate-90"></div>
+      <div className="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-52 top-[39%] border rotate-45"></div>
+      <div className="w-full text-lg md:text-2xl gap-0.5 border text-offBlack p-6 flex items-center justify-center flex-col border-white relative z-20">
         <div>
           Picture a fusion of{" "}
           <span className="text-primary">product design</span> and{" "}
@@ -88,13 +87,13 @@ export default function Home() {
 
       <div
         id="works"
-        class=" relative  p-2  border-white   gap-6 items-center justify-center"
+        className=" relative  p-2  border-white   gap-6 items-center justify-center"
       >
         <h3 className="text-4xl pt-3 p-4 mb-3  md:text-5xl text-center text-white">
           Works
         </h3>
-        <Peg from="works" to="about" className=" left-1/4" />
-        <Peg from="works" to="about" className=" right-1/4 " />
+        <Peg from="works" to="about" className=" left-40" />
+        <Peg from="works" to="about" className=" right-40 " />
         <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
         <div className="flex flex-col mt-5 items-center justify-center">
           <div className="relative">
@@ -121,12 +120,12 @@ export default function Home() {
       <div>
         <h3
           id="about"
-          class="flex border-t-[1px] border-b-[1px]  text-center p-6 text-white  w-full border-white items-center justify-center text-3xl md:text-4xl"
+          className="flex border-t-[1px] border-b-[1px]  text-center p-6 text-white  w-full border-white items-center justify-center text-3xl md:text-4xl"
         >
           Little about me...
         </h3>
-        <div class="flex w-[90%] justify-center  text-offBlack gap-1">
-          <div className="h-full w-[45%] p-8 text-3xl">
+        <div className="flex w-full flex-col items-center md:flex-row md:w-[90%] justify-center  text-offBlack gap-1">
+          <div className="h-full md:w-[45%] p-8 text-3xl">
             <p className="p-2">
               Hey, I&apos;m <span className="text-primary">Rhema</span> – a
               hybrid of product design and backend mastery. When I&apos;m not
@@ -145,21 +144,21 @@ export default function Home() {
             width={100}
             height={100}
             alt="My profile picture"
-            className="w-[20%]"
+            className="w-[60%] md:w-[20%]"
           />
         </div>
       </div>
       <div
         id="resume"
-        class=" relative  p-2  border-white   gap-6 items-center justify-center"
+        className=" relative  p-2  border-white   gap-6 items-center justify-center"
       >
         <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
         <h3 className="text-4xl  border-white pt-3 p-4 mb-3  md:text-5xl text-center text-white">
           My Resume
         </h3>
         <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
-        <Peg from="resume" to="contact-id" className=" left-1/4" />
-        <Peg from="resume" to="contact-id" className=" right-1/4 " />
+        <Peg from="resume" to="contact-id" className=" left-40 mt-2" />
+        <Peg from="resume" to="contact-id" className=" right-40 mt-2" />
         <ResumeSwitcher />
         <div className="h-[1px] mt-3 -ml-1.5   w-[102%] bg-white"></div>
         <h3
@@ -169,73 +168,11 @@ export default function Home() {
           Contact Me...
         </h3>
         <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
-        <form
-          className="flex flex-col mt-2 items-center justify-around gap-3"
-          action={sendEmail}
-        >
-          <div>
-            <div class="flex ml-2  text-2xl">
-              <p className="text-primary mr-2.5">01.</p>
-              <p className="text-white  mr-6">Name</p>
-              <input
-                type="text"
-                name="name"
-                className="bg-transparent outline-none  text-offBlack"
-                placeholder="Enter your name..."
-              />
-            </div>
-            <div className="h-[1px]   w-[50vw] bg-white"></div>
-          </div>
-          <div>
-            <div class="flex ml-2  text-2xl">
-              <p className="text-primary mr-2.5">02.</p>
-              <p className="text-white  mr-6">Email</p>
-              <input
-                type="email"
-                name="email"
-                className="bg-transparent outline-none  text-offBlack"
-                placeholder="Enter your email..."
-              />
-            </div>
-            <div className="h-[1px]   w-[50vw] bg-white"></div>
-          </div>
-          <div>
-            <div class="flex ml-2  text-2xl">
-              <p className="text-primary mr-2.5">03.</p>
-              <p className="text-white  mr-6">Phone Number</p>
-              <input
-                type="tel"
-                name="number"
-                className="bg-transparent w-3/4 outline-none  text-offBlack"
-                placeholder="Enter your phone number..."
-              />
-            </div>
-            <div className="h-[1px]   w-[50vw] bg-white"></div>
-          </div>
-          <div>
-            <div class="flex ml-2  text-2xl">
-              <p className="text-primary mr-2.5">04.</p>
-              <p className="text-white  mr-6">Your Message to me</p>
-              <input
-                type="text"
-                name="message"
-                className="bg-transparent outline-none  text-offBlack"
-                placeholder="Write your mind..."
-              />
-            </div>
-            <div className="h-[1px]   w-[50vw] bg-white"></div>
-          </div>
-          <button
-            type="submit"
-            className="bg-primary text-lg mt-4 rounded-sm px-10 py-3"
-          >
-            Send Message
-          </button>
-        </form>
+        <Form />
       </div>
       <div
         id="contact-id"
-        className="h-[1px] -ml-1.5   w-[102%] bg-white"
+        className="h-0 md:h-[1px] -ml-1.5   w-[102%] bg-white"
       ></div>
     </main>
   );

@@ -13,14 +13,11 @@ export async function sendEmail(prevState, formData) {
   const phoneNumber = parsePhoneNumberFromString(number, "ZZ");
 
   if (phoneNumber) {
-    // Get the country code
-    const countryCode = phoneNumber.country;
+    const callingCode = phoneNumber.countryCallingCode;
 
-    // Get the national number
     const nationalNumber = phoneNumber.nationalNumber;
 
-    // Construct the result
-    const result = `${countryCode} ${nationalNumber}`;
+    const result = `${callingCode}${nationalNumber}`;
     const whatsappLink = `https://wa.me/${result}`;
     const { data, error } = await resend.emails.send({
       from: "Me <work@tomisinodukoya.com>",
@@ -28,7 +25,19 @@ export async function sendEmail(prevState, formData) {
       subject: "I want to work with you!",
       react: Email({ senderName: name, email, message, whatsappLink }),
     });
-
+    if (data) {
+      return {
+        message: "We will be in contact 🚀",
+        success: true,
+      };
+    }
+    if (error) {
+      return {
+        message: "Unable to submit contact form",
+        success: false,
+      };
+    }
+    console.log(whatsappLink, name, email, message);
     return {
       message: "We will be in contact 🚀",
       success: true,
