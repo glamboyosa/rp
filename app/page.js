@@ -4,6 +4,8 @@ import { cn } from "./utils";
 import { Links } from "./links";
 import Peg from "./peg";
 import ResumeSwitcher from "./resume-switcher";
+import { sendEmail } from "./actions";
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default function Home() {
   return (
@@ -169,7 +171,7 @@ export default function Home() {
         <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
         <form
           className="flex flex-col mt-2 items-center justify-around gap-3"
-          action=""
+          action={sendEmail}
         >
           <div>
             <div class="flex ml-2  text-2xl">
