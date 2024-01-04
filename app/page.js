@@ -8,7 +8,7 @@ import Form from "./form";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen h-[388.5vh] overflow-y-clip overflow-x-clip relative ">
+    <main className=" min-h-screen h-auto md:h-[388.5vh] overflow-y-clip overflow-x-clip relative ">
       <header className="flex items-center justify-center border-b-2 p-2 border-white">
         <p
           className={cn(
