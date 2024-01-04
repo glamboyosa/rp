@@ -33,6 +33,7 @@ export default function Home() {
               height={100}
               className="w-full -ml-8"
               alt="bar"
+              loading="eager"
             />
           </div>
           <h2 className="text-3xl mt-16 md:mt-1 text-white md:text-5xl flex items-center gap-2">
@@ -45,7 +46,13 @@ export default function Home() {
       <div className=" border-b-2 border-white -mt-6 w-full"></div>
       <div className="p-8  text-white flex justify-around">
         <div className="flex gap-1.5 items-start uppercase">
-          <Image src="/globe.svg" width={20} height={20} alt="globe svg" />
+          <Image
+            src="/globe.svg"
+            width={20}
+            height={20}
+            alt="globe svg"
+            loading="eager"
+          />
           <p className="text-base text-primary md:text-lg">/</p>
           <p className="text-base w-1/2 md:text-lg">
             based in Lagos and open to remote work
@@ -102,6 +109,7 @@ export default function Home() {
               width={500}
               height={500}
               alt="bike"
+              loading="eager"
               className="mb-2 h-full items-center"
             />
           </div>
@@ -111,6 +119,7 @@ export default function Home() {
             src="/pack.svg"
             width={500}
             height={500}
+            loading="eager"
             alt="bike"
             className="mb-2 h-full items-center"
           />
@@ -143,6 +152,7 @@ export default function Home() {
             src="/me.svg"
             width={100}
             height={100}
+            loading="eager"
             alt="My profile picture"
             className="w-[60%] md:w-[20%]"
           />
