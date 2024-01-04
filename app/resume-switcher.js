@@ -33,14 +33,14 @@ const ResumeSwitcher = () => {
       {selection === "pd" ? (
         <iframe
           src="/prd.pdf"
-          className="w-1/2 mt-2 h-[300px] md:h-[800px] overflow-scroll"
+          className="w-3/4 md:w-1/2 mt-2 h-[300px] md:h-[800px] overflow-scroll"
           loading="lazy"
           title="PDF-file"
         ></iframe>
       ) : (
         <iframe
           src="/bnkd.pdf"
-          className="w-1/2 mt-2h-[300px] md:h-[800px] overflow-scroll"
+          className="w-3/4 md:w-1/2 mt-2h-[300px] md:h-[800px] overflow-scroll"
           loading="lazy"
           title="PDF-file"
         ></iframe>
