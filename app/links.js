@@ -22,7 +22,7 @@ export function Links() {
   }, [params, pathname]);
 
   return (
-    <nav className="mr-1 md:mr-[590px]">
+    <nav className="mr-[2px] md:mr-[590px]">
       <ul className="gap-4 text-white flex [&>*]:text-xl">
         <li>
           {activeTab === "home" ? (
