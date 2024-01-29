@@ -21,33 +21,53 @@ const Form = () => {
     }
   }, [state]);
   return (
-    <form
-      className="flex flex-col mt-2 items-center justify-around gap-3"
-      action={formAction}
-    >
-      <div>
-        <div className="flex ml-2  text-2xl">
-          <p className="text-primary mr-2.5">01.</p>
-          <p className="text-white  mr-6">Name</p>
-          <input
-            type="text"
-            name="name"
-            className="bg-transparent outline-none  min-w-64  text-offBlack"
-            placeholder="Enter your name..."
+    <form className="" action={formAction}>
+      <table className="text-2xl">
+        <tbody>
+          <tr>
+            <td>
+              <p className="text-primary mr-2.5">01.</p>
+            </td>
+            <td>
+              <p className="text-white  mr-6">Name</p>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="name"
+                className="bg-transparent outline-none  min-w-64  text-offBlack"
+                placeholder="Enter your name..."
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p className="text-primary mr-2.5">02.</p>
+            </td>
+            <td>
+              <p className="text-white  mr-6">Email</p>
+            </td>
+            <td>
+            <input
+            type="email"
+            name="email"
+            className="bg-transparent outline-none min-w-64  text-offBlack"
+            placeholder="Enter your email..."
           />
-        </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        {/* <div className="flex ml-2  text-2xl"></div> */}
         {/* <div className="h-0 md:h-[1px] min-w-[75vw] bg-white"></div> */}
       </div>
       <div>
         <div className="flex ml-2  text-2xl">
           <p className="text-primary mr-2.5">02.</p>
           <p className="text-white  mr-6">Email</p>
-          <input
-            type="email"
-            name="email"
-            className="bg-transparent outline-none min-w-64  text-offBlack"
-            placeholder="Enter your email..."
-          />
+         
         </div>
         {/* <div className="h-0 md:h-[1px]  min-w-[75vw] bg-white"></div> */}
       </div>

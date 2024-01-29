@@ -169,7 +169,7 @@ export default function Home() {
         <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
         <Peg from="resume" to="contact-id" className=" left-40 mt-2" />
         <Peg from="resume" to="contact-id" className=" right-40 mt-2" />
-        <ResumeSwitcher />
+        {/* <ResumeSwitcher /> */}
         <div className="h-[1px] mt-3 -ml-1.5   w-[102%] bg-white"></div>
         <h3
           id="contact"
