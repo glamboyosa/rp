@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={cn(MM.className, "bg-[#262627]")}>
+      <body className={cn(MM.className, "bg-[#040404]")}>
         <main> {children}</main>
         <Toaster />
       </body>

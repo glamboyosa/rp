@@ -21,68 +21,87 @@ const Form = () => {
     }
   }, [state]);
   return (
-    <form
-      className="flex flex-col mt-2 items-center justify-around gap-3"
-      action={formAction}
-    >
-      <div>
-        <div className="flex ml-2  text-2xl">
-          <p className="text-primary mr-2.5">01.</p>
-          <p className="text-white  mr-6">Name</p>
-          <input
-            type="text"
-            name="name"
-            className="bg-transparent outline-none  min-w-64  text-offBlack"
-            placeholder="Enter your name..."
-          />
-        </div>
-        {/* <div className="h-0 md:h-[1px] min-w-[75vw] bg-white"></div> */}
-      </div>
-      <div>
-        <div className="flex ml-2  text-2xl">
-          <p className="text-primary mr-2.5">02.</p>
-          <p className="text-white  mr-6">Email</p>
-          <input
-            type="email"
-            name="email"
-            className="bg-transparent outline-none min-w-64  text-offBlack"
-            placeholder="Enter your email..."
-          />
-        </div>
-        {/* <div className="h-0 md:h-[1px]  min-w-[75vw] bg-white"></div> */}
-      </div>
-      <div>
-        <div className="flex ml-2  text-2xl">
-          <p className="text-primary mr-2.5">03.</p>
-          <p className="text-white whitespace-nowrap  mr-6">Phone Number</p>
-          <input
-            type="tel"
-            name="number"
-            className="bg-transparent min-w-64 w-3/4 outline-none  text-offBlack"
-            placeholder="Enter your phone number..."
-          />
-        </div>
-        {/* <div className="h-0 md:h-[1px] min-w-[75vw]    bg-white"></div> */}
-      </div>
-      <div>
-        <div className="flex ml-2   text-2xl">
-          <p className="text-primary mr-2.5">04.</p>
-          <p className="text-white  mr-6">Your Message to me</p>
-          <input
-            type="text"
-            name="message"
-            className="bg-transparent  min-w-64 outline-none  text-offBlack"
-            placeholder="Write your mind..."
-          />
-        </div>
-        {/* <div className="h-0 md:h-[1px]   min-w-[75vw] w-full bg-white"></div> */}
-      </div>
+    <form className="flex flex-col" action={formAction}>
+      <table className="text-5xl w-full">
+        <tbody>
+          <tr className="border-b">
+            <td>
+              <p className="text-primary py-20 px-4">01.</p>
+            </td>
+            <td>
+              <p className="text-white  pr-6">Name<span className="text-primary">*</span> </p>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="name"
+                className="bg-transparent outline-none w-full  text-primary "
+                placeholder="Enter your name..."
+              />
+            </td>
+          </tr>
+
+          <tr className="border-b">
+            <td>
+              <p className="text-primary py-20 px-4">02.</p>
+            </td>
+            <td>
+              <p className="text-white  pr-6">Email<span className="text-primary">*</span></p>
+            </td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                className="bg-transparent outline-none w-full text-primary"
+                placeholder="Enter your email..."
+              />
+            </td>
+          </tr>
+
+          <tr className="border-b">
+            <td>
+              <p className="text-primary py-20 px-4">03.</p>
+            </td>
+            <td>
+              <p className="text-white  pr-6">Phone Number<span className="text-primary">*</span></p>
+            </td>
+            <td>
+              <input
+                type="tel"
+                name="number"
+                className="bg-transparent  outline-none w-full text-primary"
+                placeholder="Enter your phone number..."
+              />
+            </td>
+          </tr>
+
+          <tr className="border-b">
+            <td>
+              <p className="text-primary py-20 px-4">04.</p>
+            </td>
+            <td>
+              <p className="text-white  pr-6">Your Message to me<span className="text-primary">*</span></p>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="message"
+                className="bg-transparent  outline-none w-full  text-primary "
+                placeholder="Write your mind..."
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div className=" py-20 grid place-content-center">
+
       <button
         type="submit"
-        className="bg-primary text-lg mt-4 rounded-sm px-10 py-3"
+        className="bg-primary text-5xl mt-4 px-16 py-6 border rounded-lg"
       >
         Send Message
       </button>
+      </div>
     </form>
   );
 };

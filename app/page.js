@@ -4,11 +4,16 @@ import { cn } from "./utils";
 import { Links } from "./links";
 import Peg from "./peg";
 import ResumeSwitcher from "./resume-switcher";
+import { FaLinkedinIn } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
+
 import Form from "./form";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen h-auto md:h-[388.5vh] overflow-y-clip overflow-x-clip relative ">
+    <main className=" min-h-screen overflow-y-clip overflow-x-clip relative ">
+      {/* <main className=" min-h-screen h-auto md:h-[388.5vh] overflow-y-clip overflow-x-clip relative "> */}
       <header className="flex items-center justify-center border-b-2 p-2 border-white">
         <p
           className={cn(
@@ -126,7 +131,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
+      <div className="border-b">
         <h3
           id="about"
           className="flex border-t-[1px] border-b-[1px]  text-center p-6 text-white  w-full border-white items-center justify-center text-3xl md:text-4xl"
@@ -158,32 +163,84 @@ export default function Home() {
           />
         </div>
       </div>
-      <div
-        id="resume"
-        className=" relative  p-2  border-white   gap-6 items-center justify-center"
-      >
-        <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
-        <h3 className="text-4xl  border-white pt-3 p-4 mb-3  md:text-5xl text-center text-white">
-          My Resume
-        </h3>
-        <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
-        <Peg from="resume" to="contact-id" className=" left-40 mt-2" />
-        <Peg from="resume" to="contact-id" className=" right-40 mt-2" />
-        <ResumeSwitcher />
-        <div className="h-[1px] mt-3 -ml-1.5   w-[102%] bg-white"></div>
-        <h3
-          id="contact"
-          className="text-4xl  border-white pt-3 p-4 mb-3  md:text-5xl text-center text-white"
-        >
-          Contact Me...
-        </h3>
-        <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
-        <Form />
+      <div className="grid">
+       
+        <section>
+            <h3
+              id="resume"
+              className="text-6xl p-16  md:text-8xl text-center text-white border-b"
+            >
+              My Resume
+            </h3>
+          <div className="grid grid-cols-[15%,1fr,15%] border-y">
+            <div className="border-r"></div>
+          <ResumeSwitcher />
+
+            <div className="border-l"></div>
+          </div>
+        </section>
+
+        <section>
+            <h3
+              id="contact"
+              className="text-6xl p-16  md:text-8xl text-center text-white border-b"
+            >
+              Contact Me...
+            </h3>
+          <div className="grid grid-cols-[15%,1fr,15%] border-y">
+            <div className="border-r"></div>
+
+            <Form />
+
+            <div className="border-l"></div>
+          </div>
+        </section>
       </div>
-      <div
-        id="contact-id"
-        className="h-0 md:h-[1px] -ml-1.5   w-[102%] bg-white"
-      ></div>
+      <div className="border-l"></div>
+
+      <section className="grid grid-cols-[15%,1fr,15%] border-y">
+        <div className="border-r"></div>
+        <div className="grid">
+          <div
+            id="contact"
+            className="text-6xl p-16  md:text-8xl text-center text-white flex justify-between"
+          >
+            <a
+              className="w-[100px] h-[100px] border-2 border-[#95FF00] rounded-full grid place-content-center"
+              href="linkedin.com/in/tomisin-odukoya-13440923b"
+            >
+              <FaLinkedinIn size={64} />
+            </a>
+            <a
+              className="w-[100px] h-[100px] border-2 border-[#95FF00] rounded-full grid place-content-center"
+              href="mailto:majortomiodukoya@gmail.com"
+            >
+              <IoMdMail size={64} />
+            </a>
+            <a
+              className="w-[100px] h-[100px] border-2 border-[#95FF00] rounded-full grid place-content-center"
+              href="https://github.com/MajorTomidev"
+            >
+              <FaGithub size={64} />
+            </a>
+          </div>
+        </div>
+        <div className="border-l"></div>
+      </section>
+
+      <footer className="border-y grid place-content-center h-[200px] text-[#95FF00]">
+        <div className="flex gap-2 items-center text-2xl">
+          <Image
+            src="/copyright-sharp.svg"
+            width={100}
+            height={100}
+            loading="eager"
+            alt="My profile picture"
+            className="w-[60%] md:w-[20%]"
+          />
+          <p>Rhema Innovations 2024</p>
+        </div>
+      </footer>
     </main>
   );
 }
