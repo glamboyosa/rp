@@ -22,14 +22,14 @@ const Form = () => {
   }, [state]);
   return (
     <form className="flex flex-col" action={formAction}>
-      <table className="text-5xl w-full">
+      <table className="text-base md:text-3xl lg:text-3xl w-full">
         <tbody>
           <tr className="border-b">
             <td>
               <p className="text-primary py-20 px-4">01.</p>
             </td>
             <td>
-              <p className="text-white  pr-6">Name<span className="text-primary">*</span> </p>
+              <p className="text-white">Name<span className="text-primary">*</span> </p>
             </td>
             <td>
               <input
@@ -46,7 +46,7 @@ const Form = () => {
               <p className="text-primary py-20 px-4">02.</p>
             </td>
             <td>
-              <p className="text-white  pr-6">Email<span className="text-primary">*</span></p>
+              <p className="text-white">Email<span className="text-primary">*</span></p>
             </td>
             <td>
               <input
@@ -63,7 +63,7 @@ const Form = () => {
               <p className="text-primary py-20 px-4">03.</p>
             </td>
             <td>
-              <p className="text-white  pr-6">Phone Number<span className="text-primary">*</span></p>
+              <p className="text-white">Phone Number<span className="text-primary">*</span></p>
             </td>
             <td>
               <input
@@ -80,7 +80,7 @@ const Form = () => {
               <p className="text-primary py-20 px-4">04.</p>
             </td>
             <td>
-              <p className="text-white  pr-6">Your Message to me<span className="text-primary">*</span></p>
+              <p className="text-white">Your Message to me<span className="text-primary">*</span></p>
             </td>
             <td>
               <input
@@ -97,7 +97,7 @@ const Form = () => {
 
       <button
         type="submit"
-        className="bg-primary text-5xl mt-4 px-16 py-6 border rounded-lg"
+        className="bg-primary text-2xl md:text-3xl lg:text-4xl px-8 py-4 md:px-16 md:py-6 border rounded-lg"
       >
         Send Message
       </button>
