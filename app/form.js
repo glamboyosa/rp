@@ -86,7 +86,7 @@ const Form = () => {
               <input
                 type="text"
                 name="message"
-                className="bg-transparent  outline-none w-full  text-primary "
+                className="bg-transparent  w-full min-h-fit  text-primary "
                 placeholder="Write your mind..."
               />
             </td>

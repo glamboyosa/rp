@@ -14,3 +14,11 @@ embed {
   font-weight: 400;
   font-style: normal;
 }
+
+
+textarea {
+  white-space: normal;
+  text-align: justify;
+  -moz-text-align-last: center; /* Firefox 12+ */
+  text-align-last: center;
+}

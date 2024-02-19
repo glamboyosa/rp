@@ -30,7 +30,7 @@ export default function Home() {
         className="grid grid-cols-[5%,1fr,5%] md:grid-cols-[15%,1fr,15%] border-y h-[400px]"
       >
         <div className="border-r"></div>
-        <div className=" uppercase h-full flex flex-col justify-center">
+        <div className=" uppercase h-full flex flex-col justify-center gap-12">
           <div className=" flex justify-center items-center">
             <h1 className="text-4xl  text-primary md:text-[70px] relative p-6">
               Tomisin Rhema Odukoya
@@ -39,7 +39,7 @@ export default function Home() {
               </span>
             </h1>
           </div>
-          <h2 className="text-3xl mt-16 md:mt-1 text-white md:text-5xl flex items-center justify-center gap-2">
+          <h2 className="text-3xl mt-16 md:mt-1 text-white md:text-7xl flex items-center justify-center gap-2">
             <p>Product Design</p>
             <p className="text-primary">x</p>
             <p>Backend engineer</p>
@@ -71,14 +71,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full text-lg md:text-5xl gap-0.5  text-offBlack py-16 px-[5%] md:px-[15%] text-center flex items-center justify-center flex-col border-y  relative z-20">
+      <div className="w-full text-lg md:text-5xl  text-offBlack py-16 px-[5%] md:px-[10%] text-center flex items-center justify-center flex-col border relative z-20 ">
         <Image
           src="/Artwork.svg"
           width={800}
           height={800}
           alt="bike"
           loading="eager"
-          className=" absolute -right-[470px] -top-[150px] "
+          className=" absolute -right-[470px] -top-[80px] "
         />
         <Image
           src="/Left_wing_Artwork.svg"
@@ -86,23 +86,17 @@ export default function Home() {
           height={800}
           alt="bike"
           loading="eager"
-          className=" absolute -left-[470px] -top-[150px] "
+          className=" absolute -left-[470px] -top-[80px] "
         />
-        <div>
+        <div className="leading-relaxed">
           Picture a fusion of{" "}
           <span className="text-primary">product design</span> and{" "}
           <span className="text-primary">backend engineering </span> – yep,
-          that&apos;s <span className="text-primary">me!</span>
-        </div>
-        <div>
-          {" "}
-          I thrive in this <q className="text-primary">weird world</q> where
-          creativity meets <span className="text-primary">code.</span>
-        </div>
-        <div>
-          {" "}
-          Welcome to my <span className="text-primary">portfolio</span>, where I
-          blend the unexpected to create something uniquely awesome.
+          that&apos;s <span className="text-primary">me! <br /> </span>I thrive in this{" "}
+          <q className="text-primary">weird world</q> where creativity meets{" "}
+          <span className="text-primary">code. <br /></span> Welcome to my{" "}
+          <span className="text-primary">portfolio</span>, where I blend the
+          unexpected to create something <br /> uniquely awesome.
         </div>
       </div>
 
@@ -118,7 +112,7 @@ export default function Home() {
         <div className="grid grid-cols-[5%,1fr,5%] md:grid-cols-[15%,1fr,15%]">
           <div className="border-r"></div>
           <div className="p-8 flex flex-col  gap-8">
-            <a className="">
+            <a className="hover:border-[#95FF00] hover:border-2 duration-200  ">
               <Image
                 src="/greedy_pig.svg"
                 width={500}
@@ -129,7 +123,7 @@ export default function Home() {
               />
             </a>
 
-            <a className="">
+            <a className="hover:border-[#95FF00] hover:border-2 duration-200">
               <Image
                 src="/package_dash.svg"
                 width={500}
@@ -140,7 +134,7 @@ export default function Home() {
               />
             </a>
 
-            <a className="">
+            <a className="hover:border-[#95FF00] hover:border-2 duration-200">
               <Image
                 src="/Intervyou.svg"
                 width={500}
@@ -151,7 +145,7 @@ export default function Home() {
               />
             </a>
 
-            <a className="">
+            <a className="hover:border-[#95FF00] hover:border-2 duration-200">
               <Image
                 src="/Django_Quiz_Api.svg"
                 width={500}
@@ -179,12 +173,11 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 py-8  px-[5%] md:px-[10%]  text-offBlack gap-4">
           <div className="h-full flex items-center  text-5xl">
-            <p className="">
+            <p className=" leading-normal">
               Hey, I&apos;m <span className="text-primary">Rhema</span> – a
               hybrid of product design and backend mastery. When I&apos;m not
               coding, I&apos;m hitting the gym or cooking up a storm while
               cheering for basketball and soccer.
-              <br />
               <br />
               My knack for innovation merges with a team-centric approach and
               killer communication. I obsess over details, thrive on feedback,
@@ -198,7 +191,7 @@ export default function Home() {
             height={100}
             loading="eager"
             alt="My profile picture"
-            className="w-full h-[700px]"
+            className="w-full h-full"
           />
         </div>
       </div>
@@ -253,21 +246,21 @@ export default function Home() {
           >
             <a
               className="w-[50px] h-[50px] md:w-[100px] md:h-[100px] border-2 border-[#95FF00] rounded-full grid place-content-center"
-              href="linkedin.com/in/tomisin-odukoya-13440923b"
+              href="https://www.linkedin.com/in/tomisin-odukoya-13440923b/" target="_blank"
             >
               <FaLinkedinIn size={64} className="hidden md:flex" />
               <FaLinkedinIn size={32} className="md:hidden" />
             </a>
             <a
               className="w-[50px] h-[50px] md:w-[100px] md:h-[100px] border-2 border-[#95FF00] rounded-full grid place-content-center"
-              href="mailto:majortomiodukoya@gmail.com"
+              href="mailto:majortomiodukoya@gmail.com" target="_blank"
             >
               <IoMdMail size={64} className="hidden md:flex" />
               <IoMdMail size={32} className="md:hidden" />
             </a>
             <a
               className="w-[50px] h-[50px] md:w-[100px] md:h-[100px] border-2 border-[#95FF00] rounded-full grid place-content-center"
-              href="https://github.com/MajorTomidev"
+              href="https://github.com/MajorTomidev" target="_blank"
             >
               <FaGithub size={64} className="hidden md:flex" />
               <FaGithub size={32} className="md:hidden" />
