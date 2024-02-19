@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className=" min-h-screen overflow-y-clip overflow-x-clip relative ">
       {/* <main className=" min-h-screen h-auto md:h-[388.5vh] overflow-y-clip overflow-x-clip relative "> */}
-      <header className="flex items-center justify-center border-b-2 p-2 border-white">
+      <header className="flex items-center justify-center  p-2">
         <p
           className={cn(
             sofia.className,
@@ -25,17 +25,19 @@ export default function Home() {
         </p>
         <Links />
       </header>
-      <div id="home" className="p-6  grid grid-cols-[5%,1fr,5%] md:grid-cols-[15%,1fr,15%]">
-      <div className="border-r"></div>
-        <div className="p-24 -mt-6 border-r-2 uppercase border-white border-l-2">
-          <div className="mb-8 flex justify-center">
-            <h1 className="text-4xl  text-primary md:text-[70px] relative"> 
+      <div
+        id="home"
+        className="grid grid-cols-[5%,1fr,5%] md:grid-cols-[15%,1fr,15%] border-y h-[400px]"
+      >
+        <div className="border-r"></div>
+        <div className=" uppercase h-full flex flex-col justify-center">
+          <div className=" flex justify-center items-center">
+            <h1 className="text-4xl  text-primary md:text-[70px] relative p-6">
               Tomisin Rhema Odukoya
-            <span className="text-4xl absolute top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2  -z-10  w-fit text-[#6B686840] md:text-[80px] libre-barcode">
-              Tomisin_Rhema_Odukoya
-            </span>
+              <span className="text-4xl absolute top-[70%] left-1/2 transform -translate-x-1/2 -translate-y-1/2  -z-10  w-fit text-[#6B686840] md:text-[80px] libre-barcode">
+                Tomisin_Rhema_Odukoya
+              </span>
             </h1>
-
           </div>
           <h2 className="text-3xl mt-16 md:mt-1 text-white md:text-5xl flex items-center justify-center gap-2">
             <p>Product Design</p>
@@ -43,9 +45,8 @@ export default function Home() {
             <p>Backend engineer</p>
           </h2>
         </div>
-      <div className="border-l"></div>
+        <div className="border-l"></div>
       </div>
-      <div className=" border-b-2 border-white -mt-6 w-full"></div>
       <div className="p-8  text-white flex justify-around">
         <div className="flex gap-1.5 items-start uppercase">
           <Image
@@ -70,12 +71,23 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-36 top-[38%] border rounded-full rotate-90"></div>
-      <div className="h-60 w-60 bg-inherit border-shapes absolute inset-x-0 -left-52 top-[39%] border rotate-45"></div>
-
-      <div className="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-36 top-[38%] border rounded-full rotate-90"></div>
-      <div className="h-60 w-60 bg-inherit border-shapes absolute inset-y-0 -right-52 top-[39%] border rotate-45"></div>
-      <div className="w-full text-lg md:text-2xl gap-0.5 border text-offBlack p-6 flex items-center justify-center flex-col border-white relative z-20">
+      <div className="w-full text-lg md:text-5xl gap-0.5  text-offBlack py-16 px-[5%] md:px-[15%] text-center flex items-center justify-center flex-col border-y  relative z-20">
+        <Image
+          src="/Artwork.svg"
+          width={800}
+          height={800}
+          alt="bike"
+          loading="eager"
+          className=" absolute -right-[470px] -top-[150px] "
+        />
+        <Image
+          src="/Left_wing_Artwork.svg"
+          width={800}
+          height={800}
+          alt="bike"
+          loading="eager"
+          className=" absolute -left-[470px] -top-[150px] "
+        />
         <div>
           Picture a fusion of{" "}
           <span className="text-primary">product design</span> and{" "}
@@ -94,56 +106,86 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        id="works"
-        className=" relative  p-2  border-white   gap-6 items-center justify-center"
-      >
-        <h3 className="text-4xl pt-3 p-4 mb-3  md:text-5xl text-center text-white">
-          Works
-        </h3>
-        <Peg from="works" to="about" className=" left-40" />
-        <Peg from="works" to="about" className=" right-40 " />
-        <div className="h-[1px] -ml-1.5   w-[102%] bg-white"></div>
-        <div className="flex flex-col mt-5 items-center justify-center">
-          <div className="relative">
-            <Image
-              src="/bike.svg"
-              width={500}
-              height={500}
-              alt="bike"
-              loading="eager"
-              className="mb-2 h-full items-center"
-            />
-          </div>
+      <div id="works" className="    gap-6 items-center justify-center">
+        <div className="grid grid-cols-[5%,1fr,5%] md:grid-cols-[15%,1fr,15%] border-b">
+          <div className="border-r"></div>
+          <h3 className="text-6xl p-16  md:text-8xl text-center text-white">
+            Works
+          </h3>
+          <div className="border-l"></div>
         </div>
-        <div className="flex mt-5 items-center justify-center">
-          <Image
-            src="/pack.svg"
-            width={500}
-            height={500}
-            loading="eager"
-            alt="bike"
-            className="mb-2 h-full items-center"
-          />
+
+        <div className="grid grid-cols-[5%,1fr,5%] md:grid-cols-[15%,1fr,15%]">
+          <div className="border-r"></div>
+          <div className="p-8 flex flex-col  gap-8">
+            <a className="">
+              <Image
+                src="/greedy_pig.svg"
+                width={500}
+                height={500}
+                alt="bike"
+                loading="eager"
+                className=" w-full"
+              />
+            </a>
+
+            <a className="">
+              <Image
+                src="/package_dash.svg"
+                width={500}
+                height={500}
+                loading="eager"
+                alt="bike"
+                className=" w-full"
+              />
+            </a>
+
+            <a className="">
+              <Image
+                src="/Intervyou.svg"
+                width={500}
+                height={500}
+                loading="eager"
+                alt="bike"
+                className=" w-full"
+              />
+            </a>
+
+            <a className="">
+              <Image
+                src="/Django_Quiz_Api.svg"
+                width={500}
+                height={500}
+                loading="eager"
+                alt="bike"
+                className=" w-full"
+              />
+            </a>
+          </div>
+          <div className="border-l"></div>
         </div>
       </div>
 
       <div className="grid text-5xl">
-        <h3
-          id="about"
-          className="flex border-t-[1px] border-b-[1px]  text-center p-6 text-white  w-full border-white items-center justify-center text-3xl md:text-4xl"
-        >
-          Little about me...
-        </h3>
-        <div className="flex w-full flex-col items-center md:flex-row md:w-[90%] justify-center  text-offBlack gap-1">
-          <div className="h-full md:w-[45%] p-8 text-3xl">
-            <p className="p-2">
+        <div className="grid grid-cols-[5%,1fr,5%] md:grid-cols-[15%,1fr,15%] border-y">
+          <div className="border-r"></div>
+          <h3
+            id="about"
+            className="text-6xl p-16  md:text-8xl text-center text-white"
+          >
+            Little about me...
+          </h3>
+          <div className="border-l"></div>
+        </div>
+        <div className="grid grid-cols-2 py-8  px-[5%] md:px-[10%]  text-offBlack gap-4">
+          <div className="h-full flex items-center  text-5xl">
+            <p className="">
               Hey, I&apos;m <span className="text-primary">Rhema</span> – a
               hybrid of product design and backend mastery. When I&apos;m not
               coding, I&apos;m hitting the gym or cooking up a storm while
               cheering for basketball and soccer.
-            </p>
-            <p className="block p-2 mt-2">
+              <br />
+              <br />
               My knack for innovation merges with a team-centric approach and
               killer communication. I obsess over details, thrive on feedback,
               and love turning ideas into successful products. Let&apos;s blend
@@ -156,7 +198,7 @@ export default function Home() {
             height={100}
             loading="eager"
             alt="My profile picture"
-            className="w-[60%] md:w-[20%]"
+            className="w-full h-[700px]"
           />
         </div>
       </div>
@@ -166,7 +208,7 @@ export default function Home() {
             <div className="border-r"></div>
             <h3
               id="resume"
-              className="text-6xl p-16  md:text-8xl text-center text-white border-b"
+              className="text-6xl p-16  md:text-8xl text-center text-white"
             >
               My Resume
             </h3>
